@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  * @author anish
@@ -15,7 +16,8 @@ import javax.persistence.Id;
  */
 @Data
 @NoArgsConstructor
-@Entity(name = "book")
+@Entity
+@Table(name = "LMS_BOOK")
 public class Book {
 
     @Id

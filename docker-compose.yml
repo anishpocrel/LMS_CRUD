@@ -23,7 +23,7 @@ services:
     ports:
       - "8082:8082"
     environment:
-      - SPRING_DATASOURCE_URL:jdbc:postgressql://postgres:5432:/lmsdb
+      - SPRING_DATASOURCE_URL:jdbc:postgressql://postgres-lms:5432:/lmsdb
       - SPRING_DATASOURCE_USERNAME:postgres
       - SPRING_DATASOURCE_PASSWORD:postgres
 
