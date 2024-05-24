@@ -1,5 +1,7 @@
 package com.learn.lms.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.util.ArrayList;
 import java.util.List;
 import lombok.Data;
@@ -46,8 +48,8 @@ public class User {
     @Column(name = "address")
     private String address;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "user", cascade = CascadeType.REMOVE)
-    @ToString.Exclude
     private List<BookRecord> bookRecords = new ArrayList<>();
 
     public User(UserBuilder builder) {
